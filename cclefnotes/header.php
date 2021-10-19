@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <?php echo cnt_include_webfonts(); ?>
         <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
-        <?php echo the_permalink(); ?>
         <title><?php cnt_get_page_title(); ?></title>
         <?php wp_head(); ?>
     </head>

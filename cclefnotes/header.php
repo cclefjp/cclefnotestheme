@@ -9,11 +9,12 @@
         <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
         <title><?php get_the_title(); ?></title>
         <?php wp_head(); ?>
-        <?php echo 'headタグまで終了しました'; ?>
+        <?php echo 'headタグまで終了しました。'; ?>
     </head>
     <body <?php body_class(); ?>>
         <div class="container">
             <header id="header" style="background: <?php echo cnt_get_header_img_cssstyle( 'no-repeat' ); ?> background-size: cover;">
+            <?php echo '0'; ?>
                 <div class="header-inner">
                     <?php the_widget('CNT_LogoWidget'); ?>
                     <?php echo '1'; ?>

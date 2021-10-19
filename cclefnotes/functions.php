@@ -14,5 +14,7 @@ include_once('functions/cnt_breadcrumb.php');
 include_once('functions/cnt_get_sns_link.php');
 include_once('functions/cnt_get_copyright_statement.php');
 
+/* サイト全体の設定項目を管理する設定ページ */
+include_once('cnt-settings.php');
 
 echo 'function.phpの読み込みが終了しました。';

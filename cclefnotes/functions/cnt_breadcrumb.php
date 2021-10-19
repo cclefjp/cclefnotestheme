@@ -1,7 +1,7 @@
 <?php
 
 /* パンくずナビを出力する */
-function tfp_breadcrumb() {
+function cnt_breadcrumb() {
     /* 404 not foundの場合は出力しない */
     if ( is_404() || is_search() ) {
         return;

@@ -75,9 +75,9 @@ function cnt_breadcrumb() {
 
         echo '<!-- current -->';
         if (is_post_type_archive()) {
-            echo 'archive!';
+            //echo 'archive!';
         /* カスタム投稿タイプのアーカイブページの場合 */
-            $archive_title = post_type_archive_title();
+            $archive_title = post_type_archive_title('', false);
             $archive_slug = get_option('cnt_blogarchive_slug');
             $archive_link = get_site_url() . '/' . $archive_slug . '/' . $archive_title;
         } else {

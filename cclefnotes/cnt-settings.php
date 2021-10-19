@@ -40,5 +40,5 @@ function register_cnt_settings() {
 
 /* Viewの設定 */
 function cnt_setting_page() {
-    include 'view_cntsetting.php';
+    include 'view-cntsettings.php';
 }

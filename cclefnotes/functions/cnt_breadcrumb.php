@@ -55,6 +55,12 @@ function cnt_breadcrumb() {
                 $archive_link = get_site_url() . '/' . $archive_slug;
                 $archive_page = get_page_by_path($archive_slug, OBJECT);
                 $archive_title = $archive_page->post_title;
+            
+            } else if (is_post_type_archive()) {
+            /* カスタム投稿タイプのアーカイブページの場合 */
+                $archive_title = post_type_archive_title();
+                $archive_slug = get_option('cnt_blogarchive_slug');
+                $archive_link = get_site_url() . '/' . $archive_slug . '/' . $archive_title;
             }
             else {
                 $archive_link = get_post_type_archive_link( $post_type );

@@ -1,5 +1,4 @@
 <!-- 全てのページのヘッダを記載 -->
-<?php echo 'header.phpの読み込みを開始しました。'; ?>
 <!DOCTYPE HTML>
 <html lang="<?php bloginfo( 'language' ); ?>">
     <head>
@@ -14,15 +13,12 @@
     <body <?php body_class(); ?>>
         <div class="container">
             <header id="header" style="background: <?php echo cnt_get_header_img_cssstyle( 'no-repeat' ); ?> background-size: cover;">
-            <?php echo '0'; ?>
                 <div class="header-inner">
                     <?php the_widget('CNT_LogoWidget'); ?>
-                    <?php echo '1'; ?>
                     <div class="header-searchbox">
                         <?php get_search_form(true); ?>
                     </div>
                     <div class="header-navi">
-                    <?php echo '2'; ?>
                         <nav class="header-navi">
                         <?php wp_nav_menu(
                             array ( 
@@ -35,17 +31,13 @@
                     color: <?php echo cnt_get_header_font_color(); ?>;
                     font-family: <?php echo cnt_get_title_font_family(); ?>;
                     ">
-                                            <?php echo '3'; ?>
                         <?php echo cnt_get_page_title(); ?>
                     </div><!-- page-title -->
                 </div> <!-- header-inner -->
             </header>
             <div class="page-body">
-            <?php echo '4'; ?>
             	<?php if ( function_exists( 'cnt_breadcrumb' )): ?>
               	<div class="breadcrumb">
 									<?php cnt_breadcrumb(); ?>
 								</div><!-- breadcrumb -->
 							<?php endif; ?>
-<?php
-echo 'header.phpの読み込みが終了しました。';

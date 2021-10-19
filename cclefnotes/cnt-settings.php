@@ -7,7 +7,7 @@
 
  /* メニューにcnt設定画面を追加 */
  add_action('admin_menu', 'cnt_setting_menu');
- function tfp_setting_menu() {
+ function cnt_setting_menu() {
      add_options_page(
          'Cclef Notes Theme', //タイトル
          'CNT', //表示名

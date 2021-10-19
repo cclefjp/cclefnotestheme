@@ -11,9 +11,9 @@
     </head>
     <body <?php body_class(); ?>>
         <div class="container">
-            <header id="header" style="background: <?php echo tfp_get_header_img_cssstyle( 'no-repeat' ); ?> background-size: cover;">
+            <header id="header" style="background: <?php echo cnt_get_header_img_cssstyle( 'no-repeat' ); ?> background-size: cover;">
                 <div class="header-inner">
-                    <?php the_widget('TFP_LogoWidget'); ?>
+                    <?php the_widget('CNT_LogoWidget'); ?>
                     <div class="header-searchbox">
                         <?php get_search_form(true); ?>
                     </div>
@@ -26,17 +26,17 @@
                         ); ?>
                         </nav>
                     </div> <!-- header-navi -->
-                    <div class="<?php echo tfp_get_title_class(); ?>" style="
-                    color: <?php echo tfp_get_header_font_color(); ?>;
-                    font-family: <?php echo tfp_get_title_font_family(); ?>;
+                    <div class="<?php echo cnt_get_title_class(); ?>" style="
+                    color: <?php echo cnt_get_header_font_color(); ?>;
+                    font-family: <?php echo cnt_get_title_font_family(); ?>;
                     ">
-                        <?php echo tfp_get_page_title(); ?>
+                        <?php echo cnt_get_page_title(); ?>
                     </div><!-- page-title -->
                 </div> <!-- header-inner -->
             </header>
             <div class="page-body">
-            	<?php if ( function_exists( 'tfp_breadcrumb' )): ?>
+            	<?php if ( function_exists( 'cnt_breadcrumb' )): ?>
               	<div class="breadcrumb">
-									<?php tfp_breadcrumb(); ?>
+									<?php cnt_breadcrumb(); ?>
 								</div><!-- breadcrumb -->
 							<?php endif; ?>

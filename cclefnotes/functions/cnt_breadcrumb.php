@@ -56,13 +56,7 @@ function cnt_breadcrumb() {
                 $archive_page = get_page_by_path($archive_slug, OBJECT);
                 $archive_title = $archive_page->post_title;
             
-            } else if (is_post_type_archive()) {
-                echo 'archive!';
-            /* カスタム投稿タイプのアーカイブページの場合 */
-                $archive_title = post_type_archive_title();
-                $archive_slug = get_option('cnt_blogarchive_slug');
-                $archive_link = get_site_url() . '/' . $archive_slug . '/' . $archive_title;
-            }
+            } 
             else {
                 $archive_link = get_post_type_archive_link( $post_type );
                 echo '<!-- 3 $archive_link = ' . $archive_link . ' -->';
@@ -78,13 +72,27 @@ function cnt_breadcrumb() {
             echo ' &gt; ';
         }
 
+
         echo '<!-- current -->';
+        if (is_post_type_archive()) {
+            echo 'archive!';
+        /* カスタム投稿タイプのアーカイブページの場合 */
+            $archive_title = post_type_archive_title();
+            $archive_slug = get_option('cnt_blogarchive_slug');
+            $archive_link = get_site_url() . '/' . $archive_slug . '/' . $archive_title;
+        } else {
+            $archive_title = get_the_title();
+            $archive_link = get_the_permalink();
+        }
         echo '<a href="';
-        the_permalink();
+        echo $archive_link;
+//        the_permalink();
         echo '" rel="bookmark" title="';
-        the_title_attribute();
+        echo $archive_title;
+//        the_title_attribute();
         echo '">';
-        the_title();
+        echo $archive_title;
+        // the_title();
         echo '</a>';
     }
 }

@@ -7,7 +7,8 @@
                         <?php
                         wp_nav_menu(
                             array (
-                                'theme_location' => 'footer-navi',
+                                'theme_location' => 'place_footer',
+                                'container' => false,
                             )
                             );
                         ?>

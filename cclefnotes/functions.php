@@ -1,13 +1,13 @@
 <?php
 /* functions.php - cclef notes theme用の関数群 */
 
-echo 'functions.phpを読み込んでいます。';
+// echo 'functions.phpを読み込んでいます。';
 
 /* カスタムメニューを有効化する */
 register_nav_menus(
     array(
-    'header-navi' => 'Header Menu',
-    'footer-navi' => 'Footer Menu'
+    'place_header' => 'ヘッダメニュー',
+    'place_footer' => 'フッタメニュー'
     )
 );
 
@@ -41,4 +41,4 @@ include_once('cnt-settings.php');
 /* 検索フォームにHTML5マークアップのサポートを追加 */
 add_theme_support('html5', array('search-form'));
 
-echo 'function.phpの読み込みが終了しました。';
+// echo 'functions.phpの読み込みが終了しました。';

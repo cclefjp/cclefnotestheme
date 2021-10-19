@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
         <title><?php get_the_title(); ?></title>
         <?php wp_head(); ?>
-        <?php echo 'headタグまで終了しました。'; ?>
     </head>
     <body <?php body_class(); ?>>
         <div class="container">
@@ -22,7 +21,8 @@
                         <nav class="header-navi">
                         <?php wp_nav_menu(
                             array ( 
-                            'theme_location' => 'header-navi'
+                            'theme_location' => 'place_header',
+                            'container' => false,
                         )
                         ); ?>
                         </nav>

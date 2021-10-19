@@ -57,6 +57,7 @@ function cnt_breadcrumb() {
                 $archive_title = $archive_page->post_title;
             
             } else if (is_post_type_archive()) {
+                echo 'archive!';
             /* カスタム投稿タイプのアーカイブページの場合 */
                 $archive_title = post_type_archive_title();
                 $archive_slug = get_option('cnt_blogarchive_slug');

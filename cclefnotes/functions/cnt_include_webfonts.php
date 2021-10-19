@@ -1,6 +1,5 @@
 <?php
 
-
 /* 使用するWebフォントをインクルードするHTMLコードを返す */
 function cnt_include_webfonts() {
     echo '<!-- cnt_include_webfonts -->';
@@ -15,4 +14,3 @@ function cnt_include_webfonts() {
     return $result;
 }
 
-echo 'cnt_include_webfonts.phpの読み込みが終了しました。';

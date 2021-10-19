@@ -40,3 +40,5 @@
 									<?php cnt_breadcrumb(); ?>
 								</div><!-- breadcrumb -->
 							<?php endif; ?>
+<?php
+echo 'header.phpの読み込みが終了しました。';

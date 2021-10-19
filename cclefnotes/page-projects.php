@@ -19,7 +19,7 @@
  * 4. 一覧を表示する固定ページの編集ページにおいてこのテンプレートを適用してください。固定ページのURLスラッグ
  * がhogehogeと一致している場合はデフォルトテンプレートとして本テンプレートが適用されます。
  */
-$customtype_name = 'hogehoge'
+$customtype_name = 'projects'
 ?>
 
 <?php get_header(); ?>

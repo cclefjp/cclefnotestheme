@@ -12,6 +12,7 @@ include_once('functions/cnt_get_title_font_family.php');
 include_once('functions/cnt_get_page_title.php');
 include_once('functions/cnt_breadcrumb.php');
 include_once('functions/cnt_get_sns_link.php');
+include_once('functions/cnt_get_copyright_statement.php');
 
 
 echo 'function.phpの読み込みが終了しました。';

@@ -11,7 +11,9 @@ function cnt_get_page_title() {
         return '404 Not Found';
     } else if (is_search()) {
         return '検索結果';
-    } 
+    } else if (is_post_type_archive()) {
+        return post_type_archive_title();
+    }
     else {
         echo '<!-- gpt_not_front -->';
         return get_the_title();

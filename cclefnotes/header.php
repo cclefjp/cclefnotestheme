@@ -7,7 +7,7 @@
         <?php echo cnt_include_webfonts(); ?>
         <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
         <?php echo the_permalink(); ?>
-        <title><?php get_the_title(); ?></title>
+        <title><?php cnt_get_page_title(); ?></title>
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>

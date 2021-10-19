@@ -1,7 +1,7 @@
 <?php
 /* ロゴウィジェットを記述するための関数とクラス */
 
-include_once('cnt_logoimg_uri.php');
+include_once('cnt_get_logoimg_uri.php');
 
 /* ロゴ表示ウィジェット */
 class CNT_LogoWidget extends WP_Widget {

@@ -1,4 +1,5 @@
 <!-- 全てのページのヘッダを記載 -->
+<?php echo 'header.phpの読み込みを開始しました。'; ?>
 <!DOCTYPE HTML>
 <html lang="<?php bloginfo( 'language' ); ?>">
     <head>

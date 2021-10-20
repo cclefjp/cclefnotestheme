@@ -36,7 +36,8 @@ class CNT_TOCWidget extends WP_Widget {
 
         echo '<!-- before query -->';
         //$headers = $xpath->query('//[hH]?');
-        $headers = $xpath->query('//*');
+        //$headers = $xpath->query('//*');
+        $headers = $xpath->query('//*[name()="h1" or name()="H1" or name()="h2" or name()="H2" or name()="h3" or name()="H3"');
         echo '<!-- after query -->';
         echo '<div class="widget-toc">';
         foreach( $headers as $header ) {

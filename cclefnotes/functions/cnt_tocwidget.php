@@ -35,7 +35,7 @@ class CNT_TOCWidget extends WP_Widget {
         $xpath->registerPHPFunctions();
 
         echo '<!-- before query -->';
-        $headers = $xpath->query('//*');
+        $headers = $xpath->query('//[hH]?');
         //$headers = $xpath->query('//h2');
         echo '<!-- after query -->';
         echo '<div class="widget-toc">';

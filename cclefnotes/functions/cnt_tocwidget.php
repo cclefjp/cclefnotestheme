@@ -46,15 +46,17 @@ class CNT_TOCWidget extends WP_Widget {
 
             print_r($header);
             print_r($header->firstChild);
-            $matches = preg_split('/\R/u', $header->nodeValue);
+            //$matches = preg_split('/\R/u', $header->nodeValue);
             //preg_match('/^(?:.*+\n){0,1}+/', $header->nodeValue, $matches);
 
-            if ( $matches[0] ):
-                $text = $matches[0];
-            else:
-                $text = $header->nodeValue;
-            endif;
+            //if ( $matches[0] ):
+            //    $text = $matches[0];
+            //else:
+            //    $text = $header->nodeValue;
+            //endif;
             //$text = $matches[0];
+
+            $text = $header->firstChild->textContent;
 
             if ( $ankerid ) {
                 $toc_code = '<a href="#' . $ankerid . '">' . $text . '</a>';

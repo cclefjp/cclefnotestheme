@@ -2,7 +2,7 @@
 <article class="postdetail">
 		<div class="post-container">
 			<div class="post-body"><?php the_content(); ?></div><!-- post-body -->
-			<div class="toc-sidebar"><?php dynamic_sidebar( 'cnt_right_sidebar' ) ?></div><!-- toc-sidebar -->
+			<div class="toc-sidebar"><?php $result = dynamic_sidebar( 'cnt_right_sidebar' ); echo $result; ?></div><!-- toc-sidebar -->
 		</div><!-- post-container -->
 </article><!-- postdetail -->
 

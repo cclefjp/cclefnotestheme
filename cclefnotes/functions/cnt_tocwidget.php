@@ -44,8 +44,9 @@ class CNT_TOCWidget extends WP_Widget {
             $nodename = $header->nodeName;
             $ankerid = $header->getAttribute('id');
 
-            $matches = [];
-            preg_match('/^(?:.*+\n){0,1}+/', $header->nodeValue, $matches);
+            $matches = split('\n', $header->nodeValue);
+            //preg_match('/^(?:.*+\n){0,1}+/', $header->nodeValue, $matches);
+
             if ( $matches[0] ):
                 $text = $matches[0];
             else:

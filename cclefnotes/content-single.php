@@ -4,7 +4,14 @@
 			<div class="post-body"><?php the_content(); ?></div><!-- post-body -->
 			<div class="toc-sidebar">
 				<?php echo 'sidebar!'; ?>
-				<?php $result = dynamic_sidebar( 'cnt_right_sidebar' ); echo $result; ?>
+				<?php if ( is_active_sidebar( 'cnt_right_sidebar' ) ) : ?>
+				<ul id="right_sidebar">
+				<?php dynamic_sidebar( 'cnt_right_sidebar' ); ?>
+				</ul>
+				<?php else: ?>
+				<?php echo '右サイドバーがactiveではありません。'; ?>
+				<?php endif; ?>
+				<?php // $result = dynamic_sidebar( 'cnt_right_sidebar' ); echo $result; ?>
 			</div><!-- toc-sidebar -->
 		</div><!-- post-container -->
 </article><!-- postdetail -->

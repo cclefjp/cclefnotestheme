@@ -50,6 +50,7 @@ class CNT_TOCWidget extends WP_Widget {
                 $text = $matches[0];
             else:
                 $text = $header->nodeValue;
+            endif;
             //$text = $matches[0];
 
             if ( $ankerid ) {

@@ -3,7 +3,7 @@
 		<div class="post-container">
 			<div class="post-body"><?php the_content(); ?></div><!-- post-body -->
 			<div class="toc-sidebar">
-				<?php echo 'sidebar!'; ?>
+				<?php //echo 'sidebar!'; ?>
 				<?php if ( is_active_sidebar( 'cnt_right_sidebar' ) ) : ?>
 				<ul id="right_sidebar">
 				<?php dynamic_sidebar( 'cnt_right_sidebar' ); ?>

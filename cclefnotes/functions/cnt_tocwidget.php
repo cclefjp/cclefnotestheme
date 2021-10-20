@@ -48,7 +48,7 @@ class CNT_TOCWidget extends WP_Widget {
                 $toc_code = '<a href="#' . $ankerid . '">' . $header->nodeValue . '</a>';
             }
             else {
-                $toc_code = $header->nodeValue;
+                $toc_code = $header->nodeValue[0];
             }
         
             if($nodename == 'h1' || $nodename == 'H1' ) {

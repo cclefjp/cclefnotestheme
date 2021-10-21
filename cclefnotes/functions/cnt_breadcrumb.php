@@ -84,6 +84,8 @@ function cnt_breadcrumb() {
             //echo 'archive!';
         /* カスタム投稿タイプのアーカイブページの場合 */
             $archive_title = post_type_archive_title('', false);
+            $post_type_obj = get_post_type_object($post_type);
+            $archive_title = $post_type_obj->labels->menu_name;
             $archive_slug = get_option('cnt_blogarchive_slug');
             $archive_link = get_site_url() . '/' . $archive_slug . '/' . $archive_title;
         } else {

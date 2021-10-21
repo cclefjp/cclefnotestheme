@@ -14,6 +14,6 @@ function cnt_pagenavi( $the_query ) {
     );
 
     echo paginate_links( $param );
-    echo get_the_posts_pagenation();
+    echo get_the_posts_pagination();
 
 }

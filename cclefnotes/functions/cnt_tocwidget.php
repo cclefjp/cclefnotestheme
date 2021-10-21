@@ -35,26 +35,12 @@ class CNT_TOCWidget extends WP_Widget {
         $xpath->registerPHPFunctions();
 
         echo '<!-- before query -->';
-        //$headers = $xpath->query('//[hH]?');
-        //$headers = $xpath->query('//*');
         $headers = $xpath->query('//*[name()="h1" or name()="H1" or name()="h2" or name()="H2" or name()="h3" or name()="H3"]');
         echo '<!-- after query -->';
         echo '<div class="widget-toc">';
         foreach( $headers as $header ) {
             $nodename = $header->nodeName;
             $ankerid = $header->getAttribute('id');
-
-            //print_r($header);
-            //print_r($header->firstChild);
-            //$matches = preg_split('/\R/u', $header->nodeValue);
-            //preg_match('/^(?:.*+\n){0,1}+/', $header->nodeValue, $matches);
-
-            //if ( $matches[0] ):
-            //    $text = $matches[0];
-            //else:
-            //    $text = $header->nodeValue;
-            //endif;
-            //$text = $matches[0];
 
             $text = $header->firstChild->textContent;
 
@@ -69,7 +55,6 @@ class CNT_TOCWidget extends WP_Widget {
                 echo '<h4>' . $toc_code . '</h4>';
             }
             elseif ($nodename == 'h2' || $nodename == 'H2' ) {
-                // print_r($header->getAttribute('id'));
                 echo '<h5>' . $toc_code . '</h5>';
             }
             elseif ( $nodename == 'h3' || $nodename == 'H3' ) {

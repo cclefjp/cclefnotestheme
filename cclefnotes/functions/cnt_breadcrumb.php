@@ -61,18 +61,6 @@ function cnt_breadcrumb() {
                 $post_type_obj = get_post_type_object($post_type);
                 $archive_title = $post_type_obj->labels->menu_name;
                 $archive_link = get_post_type_archive_link( $post_type );
-
-                /*
-                echo '<!-- 3 $archive_link = ' . $archive_link . ' -->';
-                $page_path = basename( untrailingslashit( $archive_link ) );
-                echo '<!-- 3.5 $page_path = ' . $page_path . ' -->';
-                $archive_page = get_page_by_path( $page_path, OBJECT );
-                echo '<!-- 3.6 $archive_page = ';
-                print_r($archive_page);
-                echo '-->';
-                $archive_title = $archive_page->post_title;
-                echo '<!-- archive $archive_title = ' . $archive_title . ' -->';
-                */
             }
             echo '<a href="' . $archive_link . '">' . $archive_title . '</a>';
             echo ' &gt; ';
@@ -84,7 +72,6 @@ function cnt_breadcrumb() {
             //echo 'archive!';
         /* カスタム投稿タイプのアーカイブページの場合 */
             $post_type = get_post_type();
-            //$archive_title = post_type_archive_title('', false);
             $post_type_obj = get_post_type_object($post_type);
             $archive_title = $post_type_obj->labels->menu_name;
             $archive_slug1 = get_option('cnt_blogarchive_slug');
@@ -96,13 +83,10 @@ function cnt_breadcrumb() {
         }
         echo '<a href="';
         echo $archive_link;
-//        the_permalink();
         echo '" rel="bookmark" title="';
         echo $archive_title;
-//        the_title_attribute();
         echo '">';
         echo $archive_title;
-        // the_title();
         echo '</a>';
     }
 }

@@ -83,6 +83,7 @@ function cnt_breadcrumb() {
         if (is_post_type_archive()) {
             //echo 'archive!';
         /* カスタム投稿タイプのアーカイブページの場合 */
+            $post_type = get_post_type();
             $archive_title = post_type_archive_title('', false);
             $post_type_obj = get_post_type_object($post_type);
             $archive_title = $post_type_obj->labels->menu_name;

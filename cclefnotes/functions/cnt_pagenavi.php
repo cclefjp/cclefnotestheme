@@ -13,7 +13,8 @@ function cnt_pagenavi( $the_query ) {
 	    'total' => $the_query->max_num_pages
     );
 
+    echo get_pagenum_link( $big );
     echo paginate_links( $param );
-    echo get_the_posts_pagination();
+    
 
 }

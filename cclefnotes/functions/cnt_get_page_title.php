@@ -11,8 +11,14 @@ function cnt_get_page_title() {
         return '404 Not Found';
     } else if (is_search()) {
         return '検索結果';
-    } else if (is_post_type_archive()) {
-        return post_type_archive_title();
+    } else if (is_post_type_archive()) { // 投稿アーカイブページの場合
+        $post_type = get_post_type();
+        $post_type_obj = get_post_type_object($post_type);
+        $archive_title = $post_type_obj->labels->menu_name;
+        if (! $archive_title ) {
+            $archive_title = post_type_archive_title();
+        }
+        return $archive_title;
     }
     else {
         echo '<!-- gpt_not_front -->';

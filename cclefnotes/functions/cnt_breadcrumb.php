@@ -87,7 +87,7 @@ function cnt_breadcrumb() {
             //$archive_title = post_type_archive_title('', false);
             $post_type_obj = get_post_type_object($post_type);
             $archive_title = $post_type_obj->labels->menu_name;
-            $archive_slug1 = get_post_type_object('post')->name; //get_option('cnt_blogarchive_slug');
+            $archive_slug1 = get_option('cnt_blogarchive_slug');
             $archive_slug2 = $post_type_obj->name;
             $archive_link = get_site_url() . '/' . $archive_slug1 . '/' . $archive_slug2;
         } else {

@@ -32,6 +32,7 @@ include_once('functions/cnt_get_post_thumbnail.php');
 include_once('functions/cnt_get_searchresult_background.php');
 include_once('functions/cnt_post_has_archive.php');
 include_once('functions/cnt_tocwidget.php');
+include_once('functions/cnt_serieswidget.php');
 
 /* サイト全体の設定項目を管理する設定ページ */
 include_once('cnt-settings.php');

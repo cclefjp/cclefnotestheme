@@ -17,7 +17,9 @@ Cclef Notes Themeは個人プログラマcclefが自分の勉強と自サイト�
 
 ## TODO
 
-* バージョン0.2の目標: CSS等で表示を改善する
+* バージョン0.2のTODO: シリーズ記事に対して左サイドバーを表示し、記事間を遷移できるようにする。
+    * その仕組みとして、タクソノミーで'series'をもつものは通常のcontent-single.phpではなく3カラム型のcontent-seriessingle.phpを出力する
+* バージョン0.3のTODO: CSS等で表示を改善する
 
 ---
 

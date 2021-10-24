@@ -50,6 +50,12 @@ class CNT_SeriesWidget extends WP_Widget {
         
         $the_query = new WP_Query($queryargs);
 
+        if ( $the_query->have_posts() ) {
+            echo '<ul>';
+            echo '<li> dummy </li>';
+            
+            echo '</ul>';
+        }
         wp_reset_postdata();
         /*
         if( have_posts( $the_query )) {

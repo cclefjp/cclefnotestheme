@@ -23,7 +23,7 @@ class CNT_SeriesWidget extends WP_Widget {
 
         $id = get_the_ID();
         $terms = get_the_terms($id, 'series');
-        print_r($terms);
+        // print_r($terms);
         $slug = 0;
         foreach ($terms as $term) {
             if ($term->taxonomy == 'series') {
@@ -37,7 +37,7 @@ class CNT_SeriesWidget extends WP_Widget {
             echo $args['after_widget'];
             return;
         }
-        /*
+        
         $queryargs = array(
             'tax_query' => array (
                 array (
@@ -47,12 +47,11 @@ class CNT_SeriesWidget extends WP_Widget {
                 )
             )
         );
-        */
-
-        echo $slug;
-
-        /*
+        
         $the_query = new WP_Query($queryargs);
+
+        wp_reset_postdata();
+        /*
         if( have_posts( $the_query )) {
             echo '<ul>';
             while ( $the_query->have_posts() ) {

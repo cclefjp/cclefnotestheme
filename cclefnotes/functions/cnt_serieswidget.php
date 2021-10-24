@@ -26,7 +26,7 @@ class CNT_SeriesWidget extends WP_Widget {
         print_r($terms);
         $slug = 0;
         foreach ($terms as $term) {
-            if ($term->$taxonomy == 'series') {
+            if ($term->taxonomy == 'series') {
                 $slug = $term['slug'];
             }
         }

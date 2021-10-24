@@ -25,6 +25,19 @@ class CNT_SeriesWidget extends WP_Widget {
         $terms = get_the_terms($id, 'series');
         print_r($terms);
         $slug = 0;
+        foreach ($terms as $term) {
+            if ($term['taxonomy'] == 'series') {
+                $slug = $term['slug'];
+            }
+        }
+
+        //見つからなかった時は終了する
+        if (! $slug ) {
+            echo 'シリーズ一覧が取得できませんでした';
+            echo $args['after_widget'];
+            return;
+        }
+        /*
         $queryargs = array(
             'tax_query' => array (
                 array (
@@ -34,6 +47,9 @@ class CNT_SeriesWidget extends WP_Widget {
                 )
             )
         );
+        */
+
+        echo $slug;
 
         /*
         $the_query = new WP_Query($queryargs);

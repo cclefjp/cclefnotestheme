@@ -53,6 +53,11 @@ class CNT_SeriesWidget extends WP_Widget {
         if ( $the_query->have_posts() ) {
             echo '<ul>';
             echo '<li> dummy </li>';
+
+            while ( $the_query->have_posts() ) {
+                $the_query->the_post();
+                echo '<li>' . the_title() . '</li>';
+            }
             
             echo '</ul>';
         }

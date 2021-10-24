@@ -35,6 +35,7 @@ class CNT_SeriesWidget extends WP_Widget {
             )
         );
 
+        /*
         $the_query = new WP_Query($queryargs);
         if( have_posts( $the_query )) {
             echo '<ul>';
@@ -46,6 +47,7 @@ class CNT_SeriesWidget extends WP_Widget {
         }
 
         wp_reset_postdata();
+        */
         echo $args['after_widget'];
     }
     

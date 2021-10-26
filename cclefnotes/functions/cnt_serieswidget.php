@@ -44,7 +44,7 @@ class CNT_SeriesWidget extends WP_Widget {
                     'taxonomy' => 'series',
                     'field' => 'slug',
                     'terms' => $slug,
-                    'order' => 'ASC',
+                    'order' => 'DESC',
                     'orderby' => 'ID'
                 )
             )
@@ -55,7 +55,7 @@ class CNT_SeriesWidget extends WP_Widget {
         if ( $the_query->have_posts() ) {
             echo '<ul>';
             // echo '<li> dummy </li>';
-            print_r($the_query);
+            //print_r($the_query);
 
             while ( $the_query->have_posts() ) {
                 $the_query->the_post();

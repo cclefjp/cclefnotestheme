@@ -43,11 +43,11 @@ class CNT_SeriesWidget extends WP_Widget {
                 array (
                     'taxonomy' => 'series',
                     'field' => 'slug',
-                    'terms' => $slug,
-                    'order' => 'ASC',
-                    'orderby' => 'ID'
+                    'terms' => $slug
                 )
-            )
+            ),
+            'order' => 'ASC',
+            'orderby' => 'ID'
         );
         
         $the_query = new WP_Query($queryargs);

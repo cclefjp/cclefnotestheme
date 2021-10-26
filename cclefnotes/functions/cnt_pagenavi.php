@@ -14,5 +14,6 @@ function cnt_pagenavi( $the_query ) {
     );
 
     echo paginate_links( $param );
+    
 
 }

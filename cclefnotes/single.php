@@ -12,8 +12,13 @@
                 <div class="main-wrapper">
 <?php
  if ( have_posts() ):
- while (  have_posts() ) : the_post();
- get_template_part( 'content-single' );
+    while (  have_posts() ) :
+        the_post();
+        if ( get_the_terms($post->ID, 'series' ) ):
+            get_template_part( 'content-seriessingle' );
+        else:
+            get_template_part( 'content-single' );
+        endif;
  endwhile;
  endif;
  ?>

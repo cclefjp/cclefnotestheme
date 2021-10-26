@@ -94,7 +94,7 @@ function cnt_register_toc_sidebar() {
     register_sidebar ( array (
         'name' => 'cnt投稿ページサイドバー右',
         'id' => 'cnt_right_sidebar',
-        'description' => 'TFPの右サイドバー',
+        'description' => 'Cclef Notesの右サイドバー',
         'before_widget' => '<aside class="side-inner">',
         'after_widget' => '</aside>',
         'before_title' => '<h4 class="sidebar_title">',

@@ -58,10 +58,11 @@ class CNT_SeriesWidget extends WP_Widget {
             print_r($the_query);
 
             while ( $the_query->have_posts() ) {
-                echo '<li> <a href="';
-                echo '">';
-                echo $the_query->the_title();
                 $the_query->the_post();
+                echo '<li> <a href="';
+                the_permalink();
+                echo '">';
+                the_title();
                 echo '</a></li>';
                 //$the_query->the_post();
                 //echo '<li>' . '<a href="' . $the_query->the_permalink() . '">' . $the_query->the_post() . '</a></li>';

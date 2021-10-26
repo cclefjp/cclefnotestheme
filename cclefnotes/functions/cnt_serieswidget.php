@@ -44,7 +44,7 @@ class CNT_SeriesWidget extends WP_Widget {
                     'taxonomy' => 'series',
                     'field' => 'slug',
                     'terms' => $slug,
-                    'order' => 'DESC',
+                    'order' => 'ASC',
                     'orderby' => 'ID'
                 )
             )

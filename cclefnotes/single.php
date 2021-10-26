@@ -14,8 +14,6 @@
  if ( have_posts() ):
     while (  have_posts() ) :
         the_post();
-        //$taxonomies = get_taxonomy( 'series' );
-        //print_r($taxonomies);
         if ( get_the_terms($post->ID, 'series' ) ):
             get_template_part( 'content-seriessingle' );
         else:

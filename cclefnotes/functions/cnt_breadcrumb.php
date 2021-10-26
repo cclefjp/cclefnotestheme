@@ -69,7 +69,6 @@ function cnt_breadcrumb() {
 
         echo '<!-- current -->';
         if (is_post_type_archive()) {
-            //echo 'archive!';
         /* カスタム投稿タイプのアーカイブページの場合 */
             $post_type = get_post_type();
             $post_type_obj = get_post_type_object($post_type);

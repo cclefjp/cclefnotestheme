@@ -23,7 +23,6 @@ class CNT_SeriesWidget extends WP_Widget {
 
         $id = get_the_ID();
         $terms = get_the_terms($id, 'series');
-        // print_r($terms);
         $slug = 0;
         foreach ($terms as $term) {
             if ($term->taxonomy == 'series') {
@@ -54,8 +53,6 @@ class CNT_SeriesWidget extends WP_Widget {
 
         if ( $the_query->have_posts() ) {
             echo '<ul>';
-            // echo '<li> dummy </li>';
-            //print_r($the_query);
 
             while ( $the_query->have_posts() ) {
                 $the_query->the_post();
@@ -64,25 +61,11 @@ class CNT_SeriesWidget extends WP_Widget {
                 echo '">';
                 the_title();
                 echo '</a></li>';
-                //$the_query->the_post();
-                //echo '<li>' . '<a href="' . $the_query->the_permalink() . '">' . $the_query->the_post() . '</a></li>';
             }
             
             echo '</ul>';
         }
         wp_reset_postdata();
-        /*
-        if( have_posts( $the_query )) {
-            echo '<ul>';
-            while ( $the_query->have_posts() ) {
-                $the_query->the_post();
-                echo '<li>' . the_title() . '</li>';
-            }
-            echo '</ul>';
-        }
-
-        wp_reset_postdata();
-        */
         echo $args['after_widget'];
     }
     
@@ -116,8 +99,6 @@ function cnt_register_series_sidebar() {
         'description' => 'Cclef Notesの左サイドバー',
         'before_widget' => '<aside class="side-inner">',
         'after_widget' => '</aside>'
-        //'before_title' => '<h4 class="sidebar_title">',
-        //'after_title' => '</h4>'
     ));
 }
 

@@ -113,7 +113,8 @@ header {
     text-align: right;
 }
 
-#menu-header > li {
+/* 元は#menu-header > li */
+.header-navi > ul > li {
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -121,14 +122,16 @@ header {
     justify-content: space-evenly;
 }
 
-#menu-header a {
+/* 元は#menu-header a */
+.menu-item a {
     text-decoration: none;
     text-shadow: 0.125vh 0.125vw 0.25vh palegoldenrod;
     color: black;
     margin: 0.5vh 0.5vw;
 }
 
-#menu-header a:hover {
+/* 元は#menu-header a:hover */
+.menu-item a:hover {
     box-shadow: 0 0.3vh 0.3vw 0 rgba(0, 0, 0, 0.25);
     transform: translateY(-0.1875em);
   }
